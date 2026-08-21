@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amperly API Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Amperly API Dashboard</h1>
+
+    <section class="card">
+      <h2>Vend Token</h2>
+      <form id="vendForm">
+        <label>Ref: <input name="ref" required /></label>
+        <label>Meter No: <input name="meterNo" /></label>
+        <label>Has Light: <select name="hasLight"><option value="">(unknown)</option><option value="YES">YES</option><option value="NO">NO</option></select></label>
+        <button type="submit">Vend Token</button>
+      </form>
+      <pre id="vendResult" class="mono"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Confirm Light</h2>
+      <form id="confirmForm">
+        <label>Ref: <input name="ref" required /></label>
+        <label>Has Light: <select name="hasLight"><option value="1">YES</option><option value="0">NO</option></select></label>
+        <button type="submit">Confirm</button>
+      </form>
+      <pre id="confirmResult" class="mono"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Tokens (debug)</h2>
+      <button id="refreshTokens">Refresh</button>
+      <pre id="tokens" class="mono"></pre>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
